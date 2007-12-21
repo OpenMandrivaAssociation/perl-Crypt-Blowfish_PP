@@ -10,6 +10,7 @@ URL:		http://search.cpan.org/dist/%{real_name}
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MA/MATTBM/%{real_name}-%{version}.tar.bz2
 BuildRequires:	perl-devel
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The Crypt::Blowfish_PP module provides for users to use the Blowfish encryption
