@@ -1,16 +1,18 @@
-%define real_name Crypt-Blowfish_PP
+%define upstream_name    Crypt-Blowfish_PP
+%define upstream_version 1.12
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Crypt::Blowfish_PP - Blowfish encryption algorithm implemented purely in Perl
-Name:		perl-%{real_name}
-Version:	1.12
-Release:	%mkrel 4
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/M/MA/MATTBM/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://search.cpan.org/CPAN/authors/id/M/MA/MATTBM/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The Crypt::Blowfish_PP module provides for users to use the Blowfish encryption
@@ -21,7 +23,7 @@ packed string. The transformation itself is a 16-round Feistel Network, and
 operates on a 64 bit block.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -40,4 +42,3 @@ rm -rf %{buildroot}
 %doc CHANGELOG README
 %{perl_vendorlib}/Crypt/Blowfish_PP.pm
 %{_mandir}/*/*
-
