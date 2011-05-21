@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Crypt::Blowfish_PP - Blowfish encryption algorithm implemented purely in Perl
 License:	GPL+ or Artistic
