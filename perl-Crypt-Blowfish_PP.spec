@@ -3,12 +3,12 @@
 
 Summary:	Crypt::Blowfish_PP - Blowfish encryption algorithm implemented purely in Perl
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	18
+Version:	%{modver}
+Release:	19
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://search.cpan.org/CPAN/authors/id/M/MA/MATTBM/%{modname}-%{modver}.tar.bz2
+Url:		https://metacpan.org/dist/Crypt-Blowfish_PP
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MATTBM/Crypt-Blowfish_PP-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
